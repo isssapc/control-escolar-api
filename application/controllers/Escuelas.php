@@ -8,18 +8,18 @@ class Escuelas extends MY_Controller {
     }
 
     public function index_post() {
-        $escuela = $this->post('usuario');
-        $nuevo = $this->escuela_model->add_usuario($escuela);
+        $escuela = $this->post('escuela');
+        $nuevo = $this->escuela_model->add_escuela($escuela);
         $this->response($nuevo);
     }
 
     public function index_get() {
-        $nuevo = $this->escuela_model->get_usuarios();
-        $this->response($nuevo);
+        $escuela = $this->escuela_model->get_escuelas();
+        $this->response($escuela);
     }
 
     public function one_get($id_escuela) {
-        $escuela = $this->escuela_model->get_usuario($id_escuela);
+        $escuela = $this->escuela_model->get_escuela($id_escuela);
         $this->response($escuela);
     }
 

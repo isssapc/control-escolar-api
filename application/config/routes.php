@@ -54,7 +54,15 @@ $route['usuarios/(:num)']['get'] = 'usuarios/one/$1';
 $route['usuarios/(:num)']['put'] = 'usuarios/update/$1';
 $route['usuarios/(:num)']['delete'] = 'usuarios/remove/$1';
 
+$route['escuelas/(:any)']['get'] = 'escuelas/one/$1';
+$route['escuelas/(:any)']['put'] = 'escuelas/update/$1';
+$route['escuelas/(:any)']['delete'] = 'escuelas/remove/$1';
+
+$route['grupos/(:any)/(:any)/(:any)/(:any)/(:any)']['get'] = 'grupos/one/$1/$2/$3/$4/$5';
+$route['grupos/(:any)']['put'] = 'grupos/update/$1';
+$route['grupos/(:any)']['delete'] = 'grupos/remove/$1';
 
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+

@@ -9,7 +9,7 @@ class Escuela_model extends CI_Model {
     public function get_escuelas() {
         $sql = "SELECT *
                 FROM escuela u
-                ORDER BY u.nombre";
+                ORDER BY u.nombre_escuela";
 
         $query = $this->db->query($sql);
         return $query->result_array();
@@ -24,7 +24,7 @@ class Escuela_model extends CI_Model {
     public function get_escuela($id_escuela) {
         $sql = "SELECT *               
                 FROM escuela 
-                WHERE id_escuela=$id_escuela 
+                WHERE escuela='$id_escuela'
                 LIMIT 1;";
         $query = $this->db->query($sql);
         return $query->row_array();
@@ -32,10 +32,10 @@ class Escuela_model extends CI_Model {
 
     public function add_escuela($escuela) {
         $this->db->insert('escuela', $escuela);
-        $id_escuela = $this->db->insert_id();
+        //$id_escuela = $this->db->insert_id();
 
-        $nuevo = $this->get_escuela($id_escuela);
-        return $nuevo;
+       // $nuevo = $this->get_escuela($id_escuela);
+        return 'ok';
     }
 
     public function update_escuela($id_escuela, $escuela) {
