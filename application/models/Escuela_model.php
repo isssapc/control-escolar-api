@@ -40,12 +40,13 @@ class Escuela_model extends CI_Model {
 
     public function update_escuela($id_escuela, $escuela) {
 
-        $where = "id_escuela = $id_escuela";
+        $where = "escuela = '$id_escuela'";
         $sql = $this->db->update_string('escuela', $escuela, $where);
         $this->db->query($sql);
 
-        $datos = $this->get_escuela($id_escuela);
-        return $datos;
+        //$datos = $this->get_escuela($id_escuela);
+        //return $datos;
+        return "hola";
     }
 
     public function del_escuela($id_escuela) {
