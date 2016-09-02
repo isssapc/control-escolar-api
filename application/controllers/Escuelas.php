@@ -8,7 +8,7 @@ class Escuelas extends MY_Controller {
     }
 
     public function index_post() {
-        $escuela = $this->post('X');
+        $escuela = $this->post('escuela');
         $nuevo = $this->escuela_model->add_escuela($escuela);
         $this->response($nuevo);
     }
