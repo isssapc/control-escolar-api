@@ -1,6 +1,6 @@
 <?php
 
-class Escuelas extends MY_Controller {
+class Carreras_dos extends MY_Controller {
 
     public function __construct() {
         parent::__construct();
@@ -8,8 +8,8 @@ class Escuelas extends MY_Controller {
     }
 
     public function index_post() {
-        $escuela = $this->post('X');
-        $nuevo = $this->escuela_model->add_escuela($escuela);
+        $carrera = $this->post('X');
+        $nuevo = $this->carrera_model->add_carrera($carrera);
         $this->response($nuevo);
     }
 
@@ -20,7 +20,7 @@ class Escuelas extends MY_Controller {
 
     public function one_get($id_escuela) {
         $escuela = $this->escuela_model->get_escuela($id_escuela);
-        $this->response(["Resultado"=>$escuela, "saludo"=>"hola"]);
+        $this->response($escuela);
     }
 
     public function remove_delete($id_escuela) {
