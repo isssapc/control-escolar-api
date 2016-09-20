@@ -33,8 +33,7 @@ class Escuela_model extends CI_Model {
     public function add_escuela($escuela) {
         $this->db->insert('escuela', $escuela);
         //$id_escuela = $this->db->insert_id();
-
-       // $nuevo = $this->get_escuela($id_escuela);
+        // $nuevo = $this->get_escuela($id_escuela);
         return 'ok';
     }
 
@@ -44,13 +43,12 @@ class Escuela_model extends CI_Model {
         $sql = $this->db->update_string('escuela', $escuela, $where);
         $this->db->query($sql);
 
-        //$datos = $this->get_escuela($id_escuela);
-        //return $datos;
-        return "hola";
+        $datos = $this->get_escuela($id_escuela);
+        return $datos;
     }
 
     public function del_escuela($id_escuela) {
-        $sql = "DELETE FROM escuela WHERE id_escuela = $id_escuela LIMIT 1";
+        $sql = "DELETE FROM escuela WHERE escuela = '$id_escuela' LIMIT 1";
         $this->db->query($sql);
         $count = $this->db->affected_rows();
         return $count;

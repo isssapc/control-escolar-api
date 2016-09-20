@@ -24,8 +24,8 @@ class Escuelas extends MY_Controller {
     }
 
     public function remove_delete($id_escuela) {
-        $nuevo = $this->escuela_model->del_usuario($id_escuela);
-        $this->response($nuevo);
+        $data = $this->escuela_model->del_escuela($id_escuela);
+        $this->response($data);
     }
 
     public function update_put($id_escuela) {
