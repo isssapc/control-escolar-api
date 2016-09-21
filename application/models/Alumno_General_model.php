@@ -9,7 +9,7 @@ class Alumno_General_model extends CI_Model {
     public function get_alumno_general() {
         $sql = "SELECT *
                 FROM alumno_general u
-                ORDER BY u.escuela, u.curp";
+                ORDER BY u.escuela, u.curp, u.nombre, u.num_control, u.sexo, u.fecha_nac, u.tipo_sangre, u.enfermedad, u.escuela_def, u.estatus";
 
         $query = $this->db->query($sql);
         return $query->result_array();
