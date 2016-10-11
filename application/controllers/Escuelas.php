@@ -7,9 +7,11 @@ class Escuelas extends MY_Controller {
         $this->load->model('escuela_model');
     }
 
-    public function index_post() {
+    public function nuevo_post() {
         $escuela = $this->post('escuela');
+        
         $nuevo = $this->escuela_model->add_escuela($escuela);
+        
         $this->response($nuevo);
     }
 

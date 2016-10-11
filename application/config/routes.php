@@ -54,6 +54,7 @@ $route['usuarios/(:num)']['get'] = 'usuarios/one/$1';
 $route['usuarios/(:num)']['put'] = 'usuarios/update/$1';
 $route['usuarios/(:num)']['delete'] = 'usuarios/remove/$1';
 
+
 $route['escuelas/(:any)']['get'] = 'escuelas/one/$1';
 $route['escuelas/(:any)']['put'] = 'escuelas/update/$1';
 $route['escuelas/(:any)']['delete'] = 'escuelas/remove/$1';

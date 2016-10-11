@@ -35,7 +35,6 @@ class Escuela_model extends CI_Model {
         $id_escuela = $this->db->insert_id();
 
         $nuevo = $this->get_escuela($id_escuela);
-        //return 'ok';
         return $nuevo;
     }
 
