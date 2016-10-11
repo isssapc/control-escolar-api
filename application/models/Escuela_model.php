@@ -32,9 +32,9 @@ class Escuela_model extends CI_Model {
 
     public function add_escuela($escuela) {
         $this->db->insert('escuela', $escuela);
-        $id_escuela = $this->db->insert_id();
+        //$id_escuela = $this->db->insert_id();
 
-        $nuevo = $this->get_escuela($id_escuela);
+        $nuevo = $this->get_escuela($escuela['escuela']);
         return $nuevo;
     }
 
